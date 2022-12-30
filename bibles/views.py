@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
-from bibles.models import Item
+from .models import Item
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from django.core.paginator import Paginator
@@ -12,7 +12,7 @@ def index(request):
     item = Item.objects.all()
 
     if len(item) == 0:
-        items_csv = open("bibles/bible1.csv", encoding="UTF-8")
+        items_csv = open("bibles/bible2.csv", encoding="UTF-8")
         items_reader = csv.reader(items_csv)
         bulk_list = []
         for i in items_reader:
