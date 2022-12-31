@@ -4,7 +4,18 @@
 {% block content %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-  <img src="{% static 'images/bible.png' %}" alt="">
+  <div class="flip">
+    <div class="card">
+      <!-- 앞면 -->
+      <div class="front">
+        <img src="{% static 'images/bible.png' %}" alt="">
+      </div>
+      <!-- 뒷면 -->
+      <div class="back">
+        <img src="{% static 'images/bible_back.png' %}" alt="">
+      </div>
+    </div>
+  </div>
 
   <a class="T_T" href="{% url 'bibles:verse' %}">랜덤뽑기</a>
 
