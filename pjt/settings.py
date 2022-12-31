@@ -107,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -125,8 +125,8 @@ STATICFILES_DIRS = [BASE_DIR / "static/"]  # static 파일들이 어디에 있�
 STATIC_ROOT = "staticfiles"  # static 파일들이 어디로 모일지를 쓰는 곳
 STATIC_URL = "/static/"
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
