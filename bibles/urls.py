@@ -5,4 +5,6 @@ app_name = 'bibles'
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("verse", views.verse, name="verse"),
+    # path("detail", views.detail, name="detail"),
 ]
