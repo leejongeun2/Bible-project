@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     "django_summernote",
     "imagekit",
     "django_bootstrap5",
-    "django_extensions",
-    "multiselectfield",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
