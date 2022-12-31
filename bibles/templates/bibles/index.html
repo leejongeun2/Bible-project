@@ -7,12 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="stackedCards.css"/>
-	<head src="stackedCards.js"></head>script>
+	<script src="stackedCards.js">
+
+  </script>
   </head>
 
   <body>
     <h1>hi</h1>
 
-  </body>
+    <div class="mycards">
+      <ul>
+        <img src="">your content</img>
+        <li>your content</li>
+        <li>your content</li>
+        <li>your content</li>
+        <li>your content</li>
+      </ul>
+    </div>
 
+
+
+  </body>
+<script>
+var stackedCard = new stackedCards({
+	 	selector: '.stacked-cards',
+	 	layout: "fanOut",
+	 	transformOrigin: "bottom",
+	});
+
+	stackedCard.init();
+</script>
 </html>
