@@ -4,19 +4,11 @@
 {% block content %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-  <div class="flip">
-    <div class="card">
-      <!-- 앞면 -->
-      <div class="front">
-        <img src="{% static 'images/bible.png' %}" alt="">
-      </div>
-      <!-- 뒷면 -->
-      <div class="back">
-        <img src="{% static 'images/bible_back.png' %}" alt="">
-      </div>
+  
+    <div class="wrapper">
+      <a href="{% url 'bibles:verse' %}" title="Button push orange" class="button btnPush btnOrange">랜덤뽑기</a>
+      <a href="{% url 'bibles:love' %}" title="Button push orange" class="button btnPush btnOrange">사랑 말씀 뽑기</a>
     </div>
-  </div>
-
-  <a class="T_T" href="{% url 'bibles:verse' %}">랜덤뽑기</a>
+  
 
 {% endblock content %}

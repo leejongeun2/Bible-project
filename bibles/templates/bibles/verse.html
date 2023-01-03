@@ -1,20 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="stackedCards.css"/>
-	<script src="stackedCards.js"></script>
-  </head>
 
-  <body>
-    <h1>{{ verse_items.content }}</h1>
-    <a href="{% url 'bibles:index' %}">다시뽑기</a>
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% if request.resolver_match.url_name == 'verse' %}
+    <div>
+      <div class="card1 flip-vertical-right wrapper">
+        <!-- 앞면 -->
+        <div class="front">
+          <img src="{% static 'images/bible.png' %}" alt="">
+        </div>
+        <!-- 뒷면 -->
+        <div class="back">
+          <div class="main_image">
+            <img src="{% static 'images/bible_back.png' %}" alt="">
+            <div class="main_image_text mt-5 text-center" style="font-size:18px">
+              <p class="verse">{{ verse_items.content }}</p>
+              <p class="verse" style="font-size:14px">{{ verse_items.vers }}</p>
+            </div>
+          </div>
+          <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>
+        </div>
+      </div>    
+    </div>
+  {% else %}
+  <div class="flip d-flex">
+    <div class="card">
+      <!-- 앞면 -->
+      {% comment %} <div class="front">
+        <img src="{% static 'images/bible.png' %}" alt="">
+      </div> {% endcomment %}
+      <!-- 뒷면 -->
+      <div class="back main_image">
+        <img src="{% static 'images/bible_back.png' %}" alt="">
+        <div class="main_image_text mt-5 text-center" style="font-size:18px">
+          <p>{{ love_items.content }}</p>
+          <p style="font-size:14px">{{ love_items.vers }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+    
+    
 
-  </body>
-
-</html>
-
+{% endblock content %}

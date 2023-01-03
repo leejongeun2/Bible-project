@@ -30,6 +30,7 @@ def index(request):
 
     context = {
         "item": item,
+        "love": love,
     }
     return render(request, "bibles/index.html")
 
@@ -37,11 +38,20 @@ def index(request):
 def verse(request):
     items = list(Item.objects.all())
     verse_items = random.choice(items)
+    # love = Item.objects.filter(keyword="사랑")
+    # love_items = random.choice(love)
     context = {
         'verse_items' : verse_items,
+        # 'love_items' : love_items,
     }
     return render(request, "bibles/verse.html", context)
 
-# def detail(request):
-#     pass
+def love(request):
+    love = Item.objects.filter(keyword="사랑")
+    love_items = random.choice(love)
+    context = {
+        'love_items' : love_items,
+    }
+
+    return render(request, "bibles/verse.html", context)
     
