@@ -3,12 +3,16 @@
 {% load static %}
 {% block content %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-  
-    <div class="wrapper">
-      <a href="{% url 'bibles:verse' %}" title="Button push orange" class="button btnPush btnOrange">랜덤뽑기</a>
-      <a href="{% url 'bibles:love' %}" title="Button push orange" class="button btnPush btnOrange">사랑 말씀 뽑기</a>
+    <div class="wrapper" style="flex-direction: column;">
+        <div class="two alt-two">
+          <h1>2023 내게 주신 성경 말씀
+            <span>뽑은 말씀을 공유 및 저장해보세요🔍</span>
+          </h1>
+        </div>
+        <img src="{% static 'images/bible1.png' %}" alt="" class="mb-3" style="height: 60px; width: 60px;">
+        <a href="{% url 'bibles:verse' %}" title="Button push orange" class="button btnPush btnRed">랜덤 말씀 뽑기</a>
+        <a href="{% url 'bibles:love' %}" title="Button push orange" class="button btnPush btnOrange">사랑 말씀 뽑기</a>
+        <a href="{% url 'bibles:wisdom' %}" title="Button push orange" class="button btnPush btnOrange">지혜 말씀 뽑기</a>
+        <a href="{% url 'bibles:comfort' %}" title="Button push orange" class="button btnPush btnOrange">위로 말씀 뽑기</a>
     </div>
-  
-
 {% endblock content %}

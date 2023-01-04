@@ -54,4 +54,22 @@ def love(request):
     }
 
     return render(request, "bibles/verse.html", context)
-    
+
+
+def wisdom(request):
+    wisdom = Item.objects.filter(keyword="지혜")
+    wisdom_items = random.choice(wisdom)
+    context = {
+        'wisdom_items' : wisdom_items,
+    }
+
+    return render(request, "bibles/verse.html", context)
+
+def comfort(request):
+    comfort = Item.objects.filter(keyword="위로")
+    comfort_items = random.choice(comfort)
+    context = {
+        'comfort_items' : comfort_items,
+    }
+
+    return render(request, "bibles/verse.html", context)
