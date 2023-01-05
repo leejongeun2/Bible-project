@@ -25,7 +25,12 @@
         </div>
       </div>
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
-      <div class="addthis_inline_share_toolbox_t56e text-center"></div>    
+      <div class="d-flex justify-content-center">
+        <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+        <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+          <i class="bi bi-chat-quote-fill me-1"></i>Kakao
+        </a> 
+      </div>   
     </div>
   {% elif request.resolver_match.url_name == 'love' %}
   <div>
@@ -47,7 +52,12 @@
       </div>
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+    <div class="d-flex justify-content-center">
+      <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+        <i class="bi bi-chat-quote-fill me-1"></i>Kakao
+      </a> 
+    </div>
   </div>
   {% elif request.resolver_match.url_name == 'wisdom' %}
   <div>
@@ -69,7 +79,12 @@
       </div>
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+    <div class="d-flex justify-content-center">
+      <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+        <i class="bi bi-chat-quote-fill me-1"></i>Kakao
+      </a> 
+    </div>
   </div>
   {% else %}
   <div>
@@ -87,16 +102,69 @@
             <p class="verse" style="font-size:14px">{{ comfort_items.vers }}</p>
           </div>
         </div>
-        <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>    
+        <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>  
       </div>
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="addthis_inline_share_toolbox_t56e text-center"></div>
-  </div>
-  {% endif %}
+    <div class="d-flex justify-content-center">
+      <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+        <i class="bi bi-chat-quote-fill me-1"></i>Kakao
+      </a> 
+    </div>
     
+    
+  </div>
+  {% endif %}    
+  
     
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-639882a381a3781a"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-639882a381a3781a"></script>  
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+  // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+  Kakao.init('50579c2a457cf683c245bc3bdd44f53e');
+</script>
+  {% comment %} console.log(Kakao.isInitialized());
+  function kakaoShare() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '2023 내게 주신 하나님의 말씀',
+        imageUrl: 'http://k.kakaocdn.net/dn/ckrKco/btrVqfPjQSG/z2wmewdXkyWCzLZ406q0c0/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'http://127.0.0.1:8000/bibles',
+          webUrl: 'http://127.0.0.1:8000/bibles',
+        },
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'http://127.0.0.1:8000/bibles',
+            webUrl: 'http://127.0.0.1:8000/bibles',
+          },
+        },
+      ],
+      // 카카오톡 미설치 시 카카오톡 설치 경로이동
+      installTalk: true,
+    })
+  } {% endcomment %}
+{% comment %} </script> {% endcomment %}
+<script>
+  function scrapKakao() {
+    var imgUrl1 = 'http://k.kakaocdn.net/dn/ckrKco/btrVqfPjQSG/z2wmewdXkyWCzLZ406q0c0/kakaolink40_original.png';
+    Kakao.Link.sendScrap({
+      requestUrl: location.origin + location.pathname,
+      templateId: 88189,
+      templateArgs: {
+        img1: imgUrl1,
+        pagePathname: location.pathname
+      },
+      installTalk: true
+    });
+  }
+</script>
+
 
 {% endblock content %}
