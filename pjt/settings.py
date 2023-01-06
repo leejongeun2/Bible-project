@@ -34,8 +34,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'bibles',
     'storages',
+    'bibles',
     "django_summernote",
     "imagekit",
     "django_bootstrap5",
@@ -142,8 +142,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEBUG = os.getenv("DEBUG") == "True"
 
 if DEBUG: 
-    MEDIA_URL = "/media/"
-    MEDIA_ROOT = BASE_DIR / "media"
+    # MEDIA_URL = "/media/"
+    # MEDIA_ROOT = BASE_DIR / "media"
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
