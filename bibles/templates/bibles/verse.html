@@ -108,7 +108,7 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <div class="d-flex justify-content-center">
       <div class="addthis_inline_share_toolbox_t56e text-center"></div>
-      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="kakaoShare(this);" style="height: 30px; width: 74px; font-size: 11px;">
         <i class="bi bi-chat-quote-fill me-1"></i>Kakao
       </a> 
     </div>
@@ -125,7 +125,8 @@
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('50579c2a457cf683c245bc3bdd44f53e');
 </script>
-  {% comment %} console.log(Kakao.isInitialized());
+<script>
+  console.log(Kakao.isInitialized());
   function kakaoShare() {
     Kakao.Link.sendDefault({
       objectType: 'feed',
@@ -133,25 +134,25 @@
         title: '2023 내게 주신 하나님의 말씀',
         imageUrl: 'http://k.kakaocdn.net/dn/ckrKco/btrVqfPjQSG/z2wmewdXkyWCzLZ406q0c0/kakaolink40_original.png',
         link: {
-          mobileWebUrl: 'http://127.0.0.1:8000/bibles',
-          webUrl: 'http://127.0.0.1:8000/bibles',
+          mobileWebUrl: 'http://biblejongeun-env.eba-8s3rddx2.ap-northeast-2.elasticbeanstalk.com',
+          webUrl: 'http://biblejongeun-env.eba-8s3rddx2.ap-northeast-2.elasticbeanstalk.com',
         },
       },
       buttons: [
         {
           title: '웹으로 보기',
           link: {
-            mobileWebUrl: 'http://127.0.0.1:8000/bibles',
-            webUrl: 'http://127.0.0.1:8000/bibles',
+            mobileWebUrl: 'http://biblejongeun-env.eba-8s3rddx2.ap-northeast-2.elasticbeanstalk.com/',
+            webUrl: 'http://biblejongeun-env.eba-8s3rddx2.ap-northeast-2.elasticbeanstalk.com/',
           },
         },
       ],
       // 카카오톡 미설치 시 카카오톡 설치 경로이동
       installTalk: true,
     })
-  } {% endcomment %}
-{% comment %} </script> {% endcomment %}
-<script>
+  } 
+ </script>
+{% comment %} <script>
   function scrapKakao() {
     var imgUrl1 = 'http://k.kakaocdn.net/dn/ckrKco/btrVqfPjQSG/z2wmewdXkyWCzLZ406q0c0/kakaolink40_original.png';
     Kakao.Link.sendScrap({
@@ -164,7 +165,7 @@
       installTalk: true
     });
   }
-</script>
+</script> {% endcomment %}
 
 
 {% endblock content %}
