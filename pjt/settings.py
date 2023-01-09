@@ -36,7 +36,6 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'storages',
     'bibles',
-    "django_summernote",
     "imagekit",
     "django_bootstrap5",
     'django.contrib.admin',
