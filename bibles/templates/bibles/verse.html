@@ -5,7 +5,434 @@
 
 {% block content %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  
   {% if request.resolver_match.url_name == 'verse' %}
+  <div class="container">
+    <section id="page1">
+      <div class="container-fixed stacked-cards stacked-cards-fanOut pt-5 mt-5 pb-0">
+
+        <ul>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div  style="text-align:center">
+                <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+            
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="page2">
+      <div>
+        <div class="card1 flip-vertical-right wrapper">
+          <!-- 앞면 -->
+          <div class="front">
+            <img src="{% static 'images/bible.png' %}" alt="">
+          </div>
+        <!-- 뒷면 -->
+          <div class="back">
+            <div class="main_image">
+              <img src="{% static 'images/bible_back.png' %}" alt="">
+              <div class="main_image_text mt-5 text-center" style="font-size:18px">
+                <p class="verse">{{ verse_items.content }}</p>
+                <p class="verse" style="font-size:14px">{{ verse_items.vers }}</p>
+              </div>
+            </div>
+            <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnRed" style="width: 100%;">다시 뽑기</a>
+          </div>
+        </li>
+         
+      </div>
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <div class="d-flex justify-content-center">
+        <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+        <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+          <i class="bi bi-chat-quote-fill me-1"></i>Kakao
+        </a> 
+      </div>
+    </section>
+  </div>
+  {% elif request.resolver_match.url_name == 'love' %}
+  <div class="container">
+    <section id="page1">
+      <div class="container-fixed stacked-cards stacked-cards-fanOut pt-5 mt-5 pb-0">
+
+        <ul>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div  style="text-align:center">
+                <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+            
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="page2">
+      <div>
+        <div class="card1 flip-vertical-right wrapper">
+          <!-- 앞면 -->
+          <div class="front">
+            <img src="{% static 'images/bible.png' %}" alt="">
+          </div>
+          <!-- 뒷면 -->
+          <div class="back">
+            <div class="main_image">
+              <img src="{% static 'images/bible_back.png' %}" alt="">
+              <div class="main_image_text mt-5 text-center" style="font-size:18px">
+                <p class="verse">{{ love_items.content }}</p>
+                <p class="verse" style="font-size:14px">{{ love_items.vers }}</p>
+              </div>
+            </div>
+            <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>
+          </div>
+        </div>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="d-flex justify-content-center">
+          <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+          <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+            <i class="bi bi-chat-quote-fill me-1"></i>Kakao
+          </a> 
+        </div>
+      </div>
+    </section>
+ </div>
+  {% elif request.resolver_match.url_name == 'wisdom' %}
+  <div class="container">
+    <section id="page1">
+      <div class="container-fixed stacked-cards stacked-cards-fanOut pt-5 mt-5 pb-0">
+
+        <ul>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div  style="text-align:center">
+                <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+            
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="page2">
+      <div>
+        <div class="card1 flip-vertical-right wrapper">
+          <!-- 앞면 -->
+          <div class="front">
+            <img src="{% static 'images/bible.png' %}" alt="">
+          </div>
+          <!-- 뒷면 -->
+          <div class="back">
+            <div class="main_image">
+              <img src="{% static 'images/bible_back.png' %}" alt="">
+              <div class="main_image_text mt-5 text-center" style="font-size:18px">
+                <p class="verse">{{ wisdom_items.content }}</p>
+                <p class="verse" style="font-size:14px">{{ wisdom_items.vers }}</p>
+              </div>
+            </div>
+            <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>
+          </div>
+        </div>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="d-flex justify-content-center">
+          <div class="addthis_inline_share_toolbox_t56e text-center"></div>
+          <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+            <i class="bi bi-chat-quote-fill me-1"></i>Kakao
+          </a> 
+        </div>
+      </div>
+    </section>
+  </div>
+  {% else %}
+  <div class="container">
+    <section id="page1">
+      <div class="container-fixed stacked-cards stacked-cards-fanOut pt-5 mt-5 pb-0">
+
+        <ul>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div  style="text-align:center">
+                <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+            
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="num_title" style="text-align:center">2023</div>
+              <div class="cross_2 m-0 p-0"></div>
+              <div class="cross_1 m-0 p-0"></div>
+              <div class="korean_title" onclick="js:turn()">하나님의 말씀</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <section id="page2">
     <div>
       <div class="card1 flip-vertical-right wrapper">
         <!-- 앞면 -->
@@ -17,104 +444,24 @@
           <div class="main_image">
             <img src="{% static 'images/bible_back.png' %}" alt="">
             <div class="main_image_text mt-5 text-center" style="font-size:18px">
-              <p class="verse">{{ verse_items.content }}</p>
-              <p class="verse" style="font-size:14px">{{ verse_items.vers }}</p>
+              <p class="verse">{{ comfort_items.content }}</p>
+              <p class="verse" style="font-size:14px">{{ comfort_items.vers }}</p>
             </div>
           </div>
-          <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnRed" style="width: 100%;">다시 뽑기</a>
+          <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>  
         </div>
       </div>
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
       <div class="d-flex justify-content-center">
         <div class="addthis_inline_share_toolbox_t56e text-center"></div>
-        <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
+        <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="kakaoShare(this);" style="height: 30px; width: 74px; font-size: 11px;">
           <i class="bi bi-chat-quote-fill me-1"></i>Kakao
         </a> 
-      </div>   
-    </div>
-  {% elif request.resolver_match.url_name == 'love' %}
-  <div>
-    <div class="card1 flip-vertical-right wrapper">
-      <!-- 앞면 -->
-      <div class="front">
-        <img src="{% static 'images/bible.png' %}" alt="">
       </div>
-      <!-- 뒷면 -->
-      <div class="back">
-        <div class="main_image">
-          <img src="{% static 'images/bible_back.png' %}" alt="">
-          <div class="main_image_text mt-5 text-center" style="font-size:18px">
-            <p class="verse">{{ love_items.content }}</p>
-            <p class="verse" style="font-size:14px">{{ love_items.vers }}</p>
-          </div>
-        </div>
-        <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>
-      </div>
+      
+      
     </div>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="d-flex justify-content-center">
-      <div class="addthis_inline_share_toolbox_t56e text-center"></div>
-      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
-        <i class="bi bi-chat-quote-fill me-1"></i>Kakao
-      </a> 
-    </div>
-  </div>
-  {% elif request.resolver_match.url_name == 'wisdom' %}
-  <div>
-    <div class="card1 flip-vertical-right wrapper">
-      <!-- 앞면 -->
-      <div class="front">
-        <img src="{% static 'images/bible.png' %}" alt="">
-      </div>
-      <!-- 뒷면 -->
-      <div class="back">
-        <div class="main_image">
-          <img src="{% static 'images/bible_back.png' %}" alt="">
-          <div class="main_image_text mt-5 text-center" style="font-size:18px">
-            <p class="verse">{{ wisdom_items.content }}</p>
-            <p class="verse" style="font-size:14px">{{ wisdom_items.vers }}</p>
-          </div>
-        </div>
-        <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>
-      </div>
-    </div>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="d-flex justify-content-center">
-      <div class="addthis_inline_share_toolbox_t56e text-center"></div>
-      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="scrapKakao(this);" style="height: 30px; width: 74px; font-size: 11px;">
-        <i class="bi bi-chat-quote-fill me-1"></i>Kakao
-      </a> 
-    </div>
-  </div>
-  {% else %}
-  <div>
-    <div class="card1 flip-vertical-right wrapper">
-      <!-- 앞면 -->
-      <div class="front">
-        <img src="{% static 'images/bible.png' %}" alt="">
-      </div>
-      <!-- 뒷면 -->
-      <div class="back">
-        <div class="main_image">
-          <img src="{% static 'images/bible_back.png' %}" alt="">
-          <div class="main_image_text mt-5 text-center" style="font-size:18px">
-            <p class="verse">{{ comfort_items.content }}</p>
-            <p class="verse" style="font-size:14px">{{ comfort_items.vers }}</p>
-          </div>
-        </div>
-        <a href="{% url 'bibles:index' %}" title="Button push orange" class="button btnPush btnOrange" style="width: 100%;">다시 뽑기</a>  
-      </div>
-    </div>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
-    <div class="d-flex justify-content-center">
-      <div class="addthis_inline_share_toolbox_t56e text-center"></div>
-      <a id="shareon-kakao" href="javascript:kakaoShare()" class="btn btn-dark rounded-pill" onclick="kakaoShare(this);" style="height: 30px; width: 74px; font-size: 11px;">
-        <i class="bi bi-chat-quote-fill me-1"></i>Kakao
-      </a> 
-    </div>
-    
-    
-  </div>
+  </section>
   {% endif %}    
   
     
@@ -152,6 +499,14 @@
     })
   } 
  </script>
+ <script src="../dist/stackedCards.min.js"></script>
+ <script src="../../../src/page.js"></script>
+<script>
+  var stackedCardFanOut = new stackedCards({selector: '.stacked-cards-fanOut', layout: "fanOut", transformOrigin: "bottom"});
+
+  stackedCardFanOut.init();
+</script>
+
 {% comment %} <script>
   function scrapKakao() {
     var imgUrl1 = 'http://k.kakaocdn.net/dn/ckrKco/btrVqfPjQSG/z2wmewdXkyWCzLZ406q0c0/kakaolink40_original.png';

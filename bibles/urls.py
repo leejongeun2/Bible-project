@@ -9,4 +9,5 @@ urlpatterns = [
     path("love", views.love, name="love"),
     path("wisdom", views.wisdom, name="wisdom"),
     path("comfort", views.comfort, name="comfort"),
+    
 ]
