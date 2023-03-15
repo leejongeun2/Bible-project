@@ -73,3 +73,4 @@ def comfort(request):
     }
 
     return render(request, "bibles/verse.html", context)
+
