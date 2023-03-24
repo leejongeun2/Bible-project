@@ -18,7 +18,7 @@
     <a href="{% url 'bibles:comfort' %}" title="Button push orange" class="button btnPush btnOrange">위로 말씀 뽑기</a>
   </div>
 
-  <script src="../dist/stackedCards.min.js"></script>
+  <script src="{% static 'dist/stackedCards.min.js' %}"></script>
 
   <script>
     var stackedCardFanOut = new stackedCards({selector: '.stacked-cards-fanOut', layout: "fanOut", transformOrigin: "bottom"});
